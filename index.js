@@ -82,7 +82,7 @@ var Contracts = {
       let [contracts, output] = await multiPromisify(compileFunc)(config);
 
       if (contracts && Object.keys(contracts).length > 0) {
-        await this.writeContracts(contracts, config);
+        await Contracts.writeContracts(contracts, config);
       }
 
       return { compiler, contracts, output };
